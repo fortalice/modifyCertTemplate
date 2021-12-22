@@ -1,5 +1,7 @@
 # Purpose
-This tool is designed to aid an operator in modifying ADCS certificate templates so that a created vulnerable state can be leveraged for privilege escalation (and then reset the template to its previous state afterwards). This is specifically designed for a scenario where `WriteProperty` rights over a template have been compromised, but the operator is unsure which properties the right applies to. In this scenairo, the template's ACL can be queried and the applicable ACE information can be cross-referenced with property GUIDs to determine the modifiable properties. 
+This tool is designed to aid an operator in modifying ADCS certificate templates so that a created vulnerable state can be leveraged for privilege escalation (and then reset the template to its previous state afterwards). This is specifically designed for a scenario where `WriteProperty` rights over a template have been compromised, but the operator is unsure which properties the right applies to. In this scenairo, the template's ACL can be queried and the applicable ACE information can be cross-referenced with property GUIDs to determine the modifiable properties.
+
+Associated [blog post](https://www.fortalicesolutions.com/posts/adcs-playing-with-esc4) on the tool and topic.
 
 # Usage
 ```
