@@ -6,6 +6,7 @@ from impacket.spnego import SPNEGO_NegTokenInit, TypesMech
 from impacket.examples.utils import parse_credentials
 from impacket.examples import logger
 from impacket.ldap import ldap, ldaptypes
+from impacket import version
 from binascii import unhexlify
 from src.models import *
 from src.constants import *
@@ -457,6 +458,7 @@ class CertificateModifier():
     
 
 def main():
+    print(version.BANNER)
     logger.init()
 
     parser = argparse.ArgumentParser(add_help = True, description = "Modify the attributes of an Active Directory certificate template")
@@ -494,6 +496,7 @@ def main():
     
     if options.debug:
         logging.getLogger().setLevel(logging.DEBUG)
+        logging.debug(version.getInstallationPath())
     else:
         logging.getLogger().setLevel(logging.INFO)
 
