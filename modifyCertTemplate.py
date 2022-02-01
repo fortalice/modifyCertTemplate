@@ -289,7 +289,7 @@ class CertificateModifier():
             if self.new_value is not None:
                 self.modify_template()
         except ldap3.core.exceptions.LDAPKeyError: 
-            logging.critical(f'Could not find proptery \'{self.target_property}\' on the object')
+            logging.critical(f'Could not find property \'{self.target_property}\' on the object')
 
 
     def modify_template(self):
@@ -360,7 +360,7 @@ class CertificateModifier():
             current_value = self.ldap_session.entries[0][self.target_property]
             logging.info(f'Current {self.target_property} value: {current_value}')
         except ldap3.core.exceptions.LDAPKeyError: 
-            logging.critical(f'Could not find proptery \'{self.target_property}\' on the object')
+            logging.critical(f'Could not find property \'{self.target_property}\' on the object')
             sys.exit(1)
 
         current_value = list(current_value)
