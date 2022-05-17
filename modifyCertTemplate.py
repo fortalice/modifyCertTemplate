@@ -443,7 +443,7 @@ class CertificateModifier():
             self.cached_sids[sid] = f'{domain}\\{name}'
             return f'{domain}\\{name}'
 
-        raise KeyError
+        return sid
 
     def get_domain_from_sid(self, sid):
         try:
